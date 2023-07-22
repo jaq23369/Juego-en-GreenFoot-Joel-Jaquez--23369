@@ -298,3 +298,28 @@ public class Movers extends Actor
             return false;
         }
     }
+    "Tercera parte, pertenece en si al personaje pero solo son sus acts y otra asignacion de restablecimiento "
+    public class Aventurero2 extends Movers
+{
+    /**
+     * Act - do whatever the Aventurero2 wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    //Crear nuestro metodo constructor
+    public Aventurero2()
+    {
+        
+    }
+    public void act()
+    {
+        slideAround();
+        collectBoost();
+        maxVelocidad();
+        agresionEnemigo();
+    }
+    public void agresionEnemigo()
+    {
+        if(golpeEnemigo() == true)
+        {
+            setLocation(40, 560);
+        }
