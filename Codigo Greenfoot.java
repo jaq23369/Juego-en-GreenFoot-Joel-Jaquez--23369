@@ -323,3 +323,39 @@ public class Movers extends Actor
         {
             setLocation(40, 560);
         }
+"Cuarta parte, superclase Enemigos"
+public class Enemigos extends Movers
+{
+    /**
+     * Act - do whatever the Enemigos wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act()
+    {
+        // Add your action code here.
+    }
+    public void wrapAtEdge()
+    {
+        int x = getX();
+        int y = getY();
+        int worldWidth = getWorld().getWidth() - 1;
+        int worldHeight = getWorld().getHeight() - 1;
+        if(x >= worldWidth)
+        {
+            setLocation(1 , y);
+        }
+        if(x <= 0)
+        {
+            setLocation(worldWidth - 1 , y);
+        }
+        if(y >= worldHeight)
+        {
+            setLocation(x , 1);
+        }
+        if(y <= 0)
+        {
+            setLocation(x , worldHeight - 1);
+        }
+    }
+
+}
