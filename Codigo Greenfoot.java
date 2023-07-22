@@ -418,3 +418,20 @@ public class Enemigo2 extends Enemigos
         }
     }
 }
+
+"Sexta parte, corresponde al elemento Boost que es una manzana que otorga velocidad extra al jugador"
+public class Boost extends Actor
+{
+    /**
+     * Act - do whatever the Boost wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public Boost()
+    {
+        getImage().scale (getImage().getWidth()/2, getImage().getHeight()/2);
+    }
+    public void act()
+    {
+        // Add your action code here.
+    }
+}
