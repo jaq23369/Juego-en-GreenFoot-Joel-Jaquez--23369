@@ -21,7 +21,7 @@ public class fondo extends World
         prepare();
         musicaFondo = new GreenfootSound("Aventura.mp3");
         musicaFondo.playLoop();
-        musicaFondo.setVolume(10);
+        musicaFondo.setVolume(0);
     }
     
      public Contador getContador()
