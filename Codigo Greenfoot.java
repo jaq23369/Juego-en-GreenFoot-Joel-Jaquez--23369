@@ -435,3 +435,13 @@ public class Boost extends Actor
         // Add your action code here.
     }
 }
+
+"Funcion de la pantalla ganar"
+public void youWin()
+    {
+       if (isTouching (YouWinPlataform.class))
+        {
+            getWorld().addObject(new YouWinScreen(), getWorld().getWidth()/2, getWorld ().getHeight()/2);
+            Greenfoot.stop();
+        } 
+    }
