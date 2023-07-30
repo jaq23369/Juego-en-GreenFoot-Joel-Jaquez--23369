@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class fondo extends World
 {
     public static GreenfootSound musicaFondo;
-    Contador cont = new Contador();
+    public static int Contador = 0;
     /**
      * Constructor for objects of class fondo.
      * 
@@ -21,12 +21,11 @@ public class fondo extends World
         prepare();
         musicaFondo = new GreenfootSound("Aventura.mp3");
         musicaFondo.playLoop();
-        musicaFondo.setVolume(0);
+        musicaFondo.setVolume(10);
     }
-    
-     public Contador getContador()
-    {    
-        return cont;
+    public void act()
+    {
+        showText("Contador: " + Contador, 200, 560);
     }
     
     /**
@@ -35,7 +34,8 @@ public class fondo extends World
      */
     private void prepare()
     {
-        addObject(cont, 200, 560);
+        Contador = 0;
+        showText("Contador: " + Contador, 200, 560);
         bloque bloque = new bloque();
         addObject(bloque,0,10*50);
         bloque bloque2 = new bloque();
@@ -194,15 +194,21 @@ public class fondo extends World
         Enemigo2 enemigo24 = new Enemigo2(true);
         addObject(enemigo24,567,260);
         removeObject(enemigo22);
-        Contador contador = new Contador();
-        addObject(contador,191,577);
-        removeObject(contador);
         Boost boost9 = new Boost();
         addObject(boost9,45,399);
         Boost boost10 = new Boost();
         addObject(boost10,252,389);
         removeObject(boost10);
         removeObject(boost9);
-        contador.addcontar();
+        Boost boost11 = new Boost();
+        addObject(boost11,198,290);
+        Boost boost12 = new Boost();
+        addObject(boost12,509,179);
+        Boost boost13 = new Boost();
+        addObject(boost13,524,495);
+        Boost boost14 = new Boost();
+        addObject(boost14,403,99);
+        Boost boost15 = new Boost();
+        addObject(boost15,340,578);
     }
 }

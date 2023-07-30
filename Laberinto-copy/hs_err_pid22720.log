@@ -1,0 +1,195 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for Failed to commit area from 0x0000000703a00000 to 0x0000000713800000 of length 266338304.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3387), pid=22720, tid=1924
+#
+# JRE version:  (11.0.14.1+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.14.1+1, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2 bluej.Boot C:\Users\bjjaq\OneDrive\Escritorio\Greenfoot Git\Juego-en-GreenFoot-Joel-Jaquez--23369\Laberinto-copy\project.greenfoot -greenfoot=true -bluej.compiler.showunchecked=false
+
+Host: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz, 12 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.1928)
+Time: Sat Jul 29 17:51:36 2023 Central America Standard Time elapsed time: 0.026609 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001e9e5f1e000):  JavaThread "Unknown thread" [_thread_in_vm, id=1924, stack(0x00000010afb00000,0x00000010afc00000)]
+
+Stack: [0x00000010afb00000,0x00000010afc00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x61e59a]
+V  [jvm.dll+0x7aaca9]
+V  [jvm.dll+0x7ac398]
+V  [jvm.dll+0x7aca73]
+V  [jvm.dll+0x24f9b8]
+V  [jvm.dll+0x61b83a]
+V  [jvm.dll+0x6100c5]
+V  [jvm.dll+0x30772c]
+V  [jvm.dll+0x3075b2]
+V  [jvm.dll+0x30c2d6]
+V  [jvm.dll+0x35272f]
+V  [jvm.dll+0x352160]
+V  [jvm.dll+0x2e4728]
+V  [jvm.dll+0x2e5886]
+V  [jvm.dll+0x784b07]
+V  [jvm.dll+0x78628f]
+V  [jvm.dll+0x35f479]
+V  [jvm.dll+0x767aa0]
+V  [jvm.dll+0x3ccf1f]
+V  [jvm.dll+0x3cf2b1]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x126ad]
+C  [ntdll.dll+0x5aa68]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001e9e5e36a50, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001e9e7fc1000 GCTaskThread "GC Thread#0" [stack: 0x00000010afc00000,0x00000010afd00000] [id=35504]
+  0x000001e9e8023000 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000010afd00000,0x00000010afe00000] [id=15144]
+  0x000001e9e8024000 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000010afe00000,0x00000010aff00000] [id=10504]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffea4223ef7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001e9e5f1a920] Heap_lock - owner thread: 0x000001e9e5f1e000
+
+Heap address: 0x0000000703a00000, size: 4038 MB, Compressed Oops mode: Non-zero based: 0x0000000703a00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.018 Loaded shared library C:\Program Files\Greenfoot\jdk\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff62dee0000 - 0x00007ff62deed000 	C:\Program Files\Greenfoot\jdk\bin\javaw.exe
+0x00007ffefc3b0000 - 0x00007ffefc5c4000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffefb080000 - 0x00007ffefb142000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffef9ad0000 - 0x00007ffef9e73000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffef9fa0000 - 0x00007ffefa0b1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffef0840000 - 0x00007ffef0857000 	C:\Program Files\Greenfoot\jdk\bin\jli.dll
+0x00007ffeedca0000 - 0x00007ffeedcb5000 	C:\Program Files\Greenfoot\jdk\bin\VCRUNTIME140.dll
+0x00007ffefa630000 - 0x00007ffefa7da000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffefa160000 - 0x00007ffefa186000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffedb920000 - 0x00007ffedbbae000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.1635_none_270f70857386168e\COMCTL32.dll
+0x00007ffefba10000 - 0x00007ffefba39000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffefb240000 - 0x00007ffefb2e7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffef9e80000 - 0x00007ffef9f99000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffefa0c0000 - 0x00007ffefa15a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffefb950000 - 0x00007ffefb981000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffec33f0000 - 0x00007ffec348b000 	C:\Program Files\Greenfoot\jdk\bin\msvcp140.dll
+0x00007ffea3f30000 - 0x00007ffea4ab1000 	C:\Program Files\Greenfoot\jdk\bin\server\jvm.dll
+0x00007ffefbca0000 - 0x00007ffefbd4e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffefb2f0000 - 0x00007ffefb394000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffefb3b0000 - 0x00007ffefb4c7000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffefc350000 - 0x00007ffefc358000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffef0d20000 - 0x00007ffef0d2a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffef2f80000 - 0x00007ffef2f89000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffef1960000 - 0x00007ffef1994000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffefa7e0000 - 0x00007ffefa851000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffef88e0000 - 0x00007ffef88f8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffef4cb0000 - 0x00007ffef4cc0000 	C:\Program Files\Greenfoot\jdk\bin\verify.dll
+0x00007ffef73f0000 - 0x00007ffef761e000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffefa2a0000 - 0x00007ffefa629000 	C:\WINDOWS\System32\combase.dll
+0x00007ffefbac0000 - 0x00007ffefbb97000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffee1610000 - 0x00007ffee1642000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffef97b0000 - 0x00007ffef982a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffee6b50000 - 0x00007ffee6b78000 	C:\Program Files\Greenfoot\jdk\bin\java.dll
+0x00007ffef30f0000 - 0x00007ffef30fa000 	C:\Program Files\Greenfoot\jdk\bin\jimage.dll
+0x00007ffeeb0b0000 - 0x00007ffeeb0c8000 	C:\Program Files\Greenfoot\jdk\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Greenfoot\jdk\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.1635_none_270f70857386168e;C:\Program Files\Greenfoot\jdk\bin\server
+
+VM Arguments:
+jvm_args: -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2 
+java_command: bluej.Boot C:\Users\bjjaq\OneDrive\Escritorio\Greenfoot Git\Juego-en-GreenFoot-Joel-Jaquez--23369\Laberinto-copy\project.greenfoot -greenfoot=true -bluej.compiler.showunchecked=false
+java_class_path (initial): C:\Program Files\Greenfoot\lib\bluej.jar;C:\Program Files\Greenfoot\lib\javafx\lib\javafx.base.jar;C:\Program Files\Greenfoot\lib\javafx\lib\javafx.controls.jar;C:\Program Files\Greenfoot\lib\javafx\lib\javafx.fxml.jar;C:\Program Files\Greenfoot\lib\javafx\lib\javafx.graphics.jar;C:\Program Files\Greenfoot\lib\javafx\lib\javafx.media.jar;C:\Program Files\Greenfoot\lib\javafx\lib\javafx.properties.jar;C:\Program Files\Greenfoot\lib\javafx\lib\javafx.swing.jar;C:\Program Files\Greenfoot\lib\javafx\lib\javafx.web.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4234149888                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Java\jdk-20\bin;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Git\cmd;C:\Users\bjjaq\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\bjjaq\AppData\Local\Programs\Python\Python310\;C:\Users\bjjaq\miniconda3;C:\Users\bjjaq\miniconda3\Library\mingw-w64\bin;C:\Users\bjjaq\miniconda3\Library\usr\bin;C:\Users\bjjaq\miniconda3\Library\bin;C:\Users\bjjaq\miniconda3\Scripts;C:\Users\bjjaq\AppData\Local\Microsoft\WindowsApps;C:\Users\bjjaq\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bjjaq\AppData\Roaming\npm;C:\Users\bjjaq\AppData\Local\GitHubDesktop\bin;
+USERNAME=bjjaq
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22621 (10.0.22621.1928)
+OS uptime: 5 days 10:54 hours
+
+CPU:total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 165 stepping 2 microcode 0xf4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 16146M (491M free)
+TotalPageFile size 65298M (AvailPageFile size 199M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 65M, peak: 318M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.14.1+1) for windows-amd64 JRE (11.0.14.1+1), built on Feb  9 2022 01:48:27 by "" with unknown MS VC++:1916
+
+END.

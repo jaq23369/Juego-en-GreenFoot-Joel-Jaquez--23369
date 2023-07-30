@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Aventurero2 extends players
 {
+    public static int Contador = 0;
     /**
      * Act - do whatever the Aventurero2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,25 +19,23 @@ public class Aventurero2 extends players
     {
         Aventurero2Lives = lives;
     }
+    fondo thisGame;
     public void act()
     {
         slideAround();
         collectBoost();
         maxVelocidad();
+        loseLife();
         agresionEnemigo();
         youWin();
-        loseLife();
+        youLose();
         
-        Actor Boost;
-        Boost=getOneObjectAtOffset(0,0,Boost.class);
-        if(Boost != null)
+        
+        Actor apple = getOneIntersectingObject (Boost.class);
+        if(apple != null)
         {
-            World world;
-            world = getWorld();
-            world.removeObject(Boost);
-            fondo mundo = (fondo)world;
-            Contador cont = mundo.getContador();
-            cont.addcontar();
+            getWorld().removeObject(apple);
+            thisGame.Contador++;
         }
     }
     public void agresionEnemigo()
@@ -51,6 +50,14 @@ public class Aventurero2 extends players
         if(golpeEnemigo())
         {
             Aventurero2Lives--;
+        }
+    }
+    public void youLose()
+    {
+        if(Aventurero2Lives == 0)
+        {
+            getWorld().addObject (new YouLose(), getWorld().getWidth ()/2, getWorld().getHeight()/2);
+            Greenfoot.stop();
         }
     }
 }
