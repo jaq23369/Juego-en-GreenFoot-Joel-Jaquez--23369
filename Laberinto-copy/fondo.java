@@ -210,5 +210,7 @@ public class fondo extends World
         addObject(boost14,403,99);
         Boost boost15 = new Boost();
         addObject(boost15,340,578);
+        YouWinPlataform youWinPlataform = new YouWinPlataform();
+        addObject(youWinPlataform,568,382);
     }
 }
